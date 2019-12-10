@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<style id="antiClickjack">body{display:none !important;}</style>
 	<script type="text/javascript">
@@ -11,6 +10,7 @@
 			top.location = self.location;
 		}
 	</script>
+
 	<link rel="apple-touch-icon" sizes="57x57" href="image/binary-style/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="image/binary-style/favicons/apple-touch-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="image/binary-style/favicons/apple-touch-icon-72x72.png">
@@ -29,44 +29,12 @@
 	<meta http-equiv="pragma" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="referrer" content="origin">
-    <title>Binary Bot</title>
-<link href="css/bundle-ec19361e69.css" rel="stylesheet" />    <link rel="stylesheet" href="css/binary.css">
-<link href="css/bot-c2c0b03571.css" rel="stylesheet" /></head>
+	<title>Welcome to the Binary Bot</title>
+<link href="css/index-9d2c76e042.css" rel="stylesheet" /><link rel="stylesheet" href="css/binary.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridle@2.0.48/css/grid-flex.css" integrity="sha256-J4p1c+K4tD3rnyfA0ztZpoQR0+mBhDTZ/J+YNOalc0k=" crossorigin="anonymous">
+</head>
 
 <body>
-    <div id="tour"></div>
-    <div id="center"></div>
-    <div id="workspace_center"></div>
-    <span id="limits-dialog"></span>
-    <span id="load-dialog"></span>
-    <span id="save-dialog"></span>
-    <span id="integrations-dialog"></span>
-    <span id="chart-dialog"></span>
-    <span id="trading-view-dialog"></span>
-    <span id="logPanel" class="draggable-dialog" data-i18n-title="Log">
-      <div id="logTable" class="logTable-scroll"></div>
-    </span>
-    <span id="summaryPanel" class="draggable-dialog" data-i18n-title="Summary"></span>
-    <div>
-        <div class="blocker"></div>
-        <div class="reality-check" style="display: none">
-            <h1 data-i18n-text="Reality Check"></h1>
-            <p data-i18n-text="Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."></p>
-            <p data-i18n-text="Please specify your preferred reality-check interval in minutes">
-                <input id="realityDuration" interval="1" maxlength="2" value="10">
-            </p>
-            <p id="rc-err" style="display: none;" class="error-msg" data-i18n-text="Please enter a number between 10 to 60."></p>
-            <div>
-                <button bcont="1" class="button" id="continue-trading" data-i18n-text="Continue Trading"></button>
-                <a id="statement-reality-check" class="button-secondary" href="#">
-                    <span data-i18n-text="Statement"></span>
-                </a>
-                <a id="logout-reality-check" class="button-secondary" href="#">
-                    <span data-i18n-text="Log out"></span>
-                </a>
-            </div>
-        </div>
-    </div>
 <div class="barspinner dark">
     <div class="rect1"></div>
     <div class="rect2"></div>
@@ -74,8 +42,8 @@
     <div class="rect4"></div>
     <div class="rect5"></div>
 </div>
-    <div id="topbar">
-        <div class="right-header show-on-load">
+	<div id="topbar">
+    <div class="wrapper show-on-load">
 <div class="languages">
   <ul id="display_language">
     <li>
@@ -105,136 +73,41 @@
   -->  
   </ul>
 </div>
-        </div>
-        <div id="server-status" class="right-header"></div>
-        <a id="contact-us" class="right-header" target="_blank" href="https://www.binary.com/en/contact.html"
-            data-i18n-text="Contact us"></a>
-        <div id="server-time" class="right-header"></div>
     </div>
-
-    <div id="header" style="display: none;">
-        <div class="left-header">
-            <div class="logo-wrapper">
-                <a href="https://www.binary.com" target="blank" id="logo">
-                    <div class="logo-parent">
-                        <div class="logo">
-                            <img class="responsive" src="image/binary-style/logo/symbol.svg" alt="Binary logo" />
-                        </div>
-                        <div class="binary-logo-text">
-                            <img class="responsive" src="" alt="">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="right-header show-on-load">
-            <div class="intro-login-logout">
-                <div id="account-list">
-                    <div id="main-logout">
-                        <ul id="main-account" class="nav-menu main-nav">
-                            <li class="account">
-                                <a href="javascript:;">
-                                    <div class="main-account">
-                                        <div class="account-type"></div>
-                                        <div class="account-id"></div>
-                                        <div class="topMenuBalance">&ensp;</div>
-                                    </div>
-                                    <div class="nav-caret"></div>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul id="all-accounts" class="nav-menu main-nav">
-                            <li class="account">
-                                <a href="javascript:;">
-                                    <div class="main-account">
-                                        <div class="account-type"></div>
-                                        <div class="account-id"></div>
-                                        <div class="topMenuBalance">&ensp;</div>
-                                    </div>
-                                    <div class="nav-caret"></div>
-                                </a>
-                                <ul>
-                                    <div class="login-id-list"></div>
-                                    <a href="javascript:;" id="btn_logout" class="logout">
-                                        <li id="logout" data-i18n-text="Log out"></li>
-                                    </a>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+	</div>
+	<div id="header">
+		<div class="wrapper">
+      <div class="logo-wrapper">
+        <div id="binary-logo"></div>
+      </div>
+		</div>
+	</div>
+	<div id="main">
+		<div>
+			<div class="content show-on-load">
+				<h1 class="center" data-i18n-text="Binary Bot"></h1>
+                <h3 class="center" data-i18n-text="Trade More Efficiently Than You Ever Thought Possible"></h3>
+      		<div id="split-container">
+                <div class="half-width top-image">
+                    <img src="image/binarylogo-puzzle.svg" alt="">
                 </div>
-                <button id="login" data-i18n-text="Log in" />
-            </div>
-        </div>
-    </div>
-    <div id="toolbox" class="actions_menu show-on-load">
-        <button data-i18n-title="Reset the blocks to their initial state" id="resetButton" class="toolbox-button icon-reset"></button>
-        <button data-i18n-title="Load new blocks (xml file)" id="load-xml" class="toolbox-button icon-browse"></button>
-        <button data-i18n-title="Save the existing blocks (xml file)" id="save-xml" class="toolbox-button icon-save"></button>
-        <button data-i18n-title="Connect Binary Bot to your Google Drive to easily save and re-use your blocks" id="integrations" class="toolbox-button icon-integrations invisible"></button>
-
-        <span class="toolbox-separator"></span>
-        <button data-i18n-title="Undo the changes (Ctrl+Z)" id="undo" class="toolbox-button icon-undo"></button>
-        <button data-i18n-title="Redo the changes (Ctrl+Shift+Z)" id="redo" class="toolbox-button icon-redo"></button>
-
-        <span class="toolbox-separator"></span>
-        <button data-i18n-title="Zoom In (Ctrl + +)" id="zoomIn" class="toolbox-button icon-zoom-in"></button>
-        <button data-i18n-title="Zoom Out (Ctrl + -)" id="zoomOut" class="toolbox-button icon-zoom-out"></button>
-        <button data-i18n-title="Rearrange Vertically" id="rearrange" class="toolbox-button icon-sort"></button>
-
-        <span class="toolbox-separator"></span>
-        <button data-i18n-title="Show/hide the summary pop-up" id="showSummary" class="toolbox-button icon-summary"></button>
-        <button data-i18n-title="Run the bot" id="runButton" class="toolbox-button icon-run"></button>
-        <button data-i18n-title="Stop the bot" id="stopButton" class="toolbox-button icon-stop"></button>
-        <button data-i18n-title="Show log" id="logButton" class="toolbox-button icon-info"></button>
-
-        <span class="toolbox-separator"></span>
-        <button data-i18n-title="Show chart" id="chartButton" class="toolbox-button icon-chart-line"></button>
-        <button data-i18n-title="Show Trading View" id="tradingViewButton" class="toolbox-button icon-trading-view"></button>
-
-        <span class="toolbox-separator"></span>
-        <button data-i18n-title="Toggle header" id="toggleHeaderButton" class="toolbox-button icon-hide-header"></button>
-
-        <div id="toolbox-account" class="right-header" style="display: none">
-            <button id="toolbox-login" data-i18n-text="Log in"></button>
-            <div id="toolbox-account-list">
-                <a href="javascript:;">
-                    <ul id="toolbox-main-account" class="nav-menu">
-                        <li class="account-type"></li>
-                        <li class="account-id"></li>
-                        <li class="topMenuBalance"></li>
-                        <li class="nav-caret"></li>
-                    </ul>
-                </a>
-            </div>
-        </div>
-    </div>
-    <ul id="toolbox-all-accounts" class="nav-menu main-nav" style="display: none;">
-        <li>
-            <ul>
-                <div class="login-id-list"></div>
-                <a href="javascript:;" id="toolbox-btn_logout" class="logout">
-                    <li id="toolbox-logout" data-i18n-text="Log out"></li>
-                </a>
-            </ul>
-        </li>
-    </ul>
-
-    <div id="blocklyArea"></div>
-    <div id="blocklyDiv" style="position: absolute;"></div>
-    
-    <form id="fileUploadForm" style="display: none;">
-        <input data-i18n-title="Open an already saved XML file and retrieve its blocks" type="file" id="files" accept=".xml"
-            multiple />
-    </form>
+                <div class="half-width index-text">
+                    <p data-i18n-text="Interested in automating your preferred strategies for trading binary options?"></p>
+    				<p data-i18n-text="Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function."></p>
+                    <p data-i18n-text="Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep."></p>
+    				<p><span data-i18n-text="Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the"></span> <a id="shop-url" href="https://shop.binary.com/collections/strategies" target="_blank" data-i18n-text="Binary.com Shop"></a>. <span data-i18n-text="Receive 80% of the sales revenue from every purchase of your bot in our app store."></span></p>
+                </div>
+                <div class="half-width bottom-image puzzle-logo">
+                    <img src="image/binarylogo-puzzle.svg" alt="">
+                </div>
+		    </div>
+                <div class="clear">
+                    <p class="cta"><a class="button" href="bot.html"><span data-i18n-text="Begin Building a Bot Now"></span></a></p>
+                    <p class="center"><span data-i18n-text="Need further assistance?"></span> <a href="mailto:affiliates@binary.com" data-i18n-text="Contact us"></a>.</p>
+                </div>
+			</div>
+		</div>
+	</div>
     <div id="footer"></div>
-    <audio id="announcement" src="sound/announcement.ogg" autostart="false"></audio>
-    <audio id="earned-money" src="sound/coins.ogg" autostart="false"></audio>
-    <audio id="job-done" src="sound/job-done.ogg" autostart="false"></audio>
-    <audio id="error" src="sound/out-of-bounds.ogg" autostart="false"></audio>
-    <audio id="severe-error" src="sound/i-am-being-serious.ogg" autostart="false"></audio>
-<script src="js/bundle-ca910a23e2.js"></script><script src="js/bot-560b274861.min.js"></script><script>!function(e,l,v,i,o,n){e[i]||(e[i]={}),e[i].account_id=n;var g,h;g=l.createElement(v),g.type="text/javascript",g.async=1,g.src=o+n,h=l.getElementsByTagName(v)[0],h.parentNode.insertBefore(g,h);e[i].q=[];e[i].on=function(z,y){e[i].q.push([z,y])}}(window,document,"script","_elev","https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=","5bbc2de0b7365");</script><!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97C2DZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->    <div class="notifyjs-corner" style="bottom: 0px; right: 0px;"></div>
-    <div class="notifyjs-corner" style="bottom: 0px; left: 0px;"></div>
-</body>
-
+<script src="js/index-addff17827.min.js"></script><!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97C2DZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) --></body>
 </html>
